@@ -2,6 +2,7 @@
 ## Setup
 ```
 pip install flask
+pip install libcst
 
 python main.py
 ```
@@ -16,7 +17,7 @@ POST http://127.0.0.1:5000/formula
         "b": "3",
         "c": "4"
     },
-    "formula": "s_result = a * b * c \nif s_result > 10: s_result_2 = 2222"
+    "formula": "s_result = a * b * c \nif s_result > 10:\n    s_result_2 = 2222"
 }
 ```
 
@@ -24,7 +25,9 @@ POST http://127.0.0.1:5000/formula
 ## Output
 ```
 {
-    "tracking": "to implement",
+    "tracking": {
+        "if_s_result_GreaterThan_10": true
+    },
     "variables": {
         "a": "2",
         "b": "3",
