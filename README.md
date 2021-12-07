@@ -1,6 +1,6 @@
 # python-rules-engine
 ## Setup
-```
+```sh
 pip install flask
 pip install libcst
 
@@ -10,7 +10,7 @@ python main.py
 ## Simulate
 
 POST http://127.0.0.1:5000/formula
-```
+```json
 {
     "variables": {
         "a": "2",
@@ -23,7 +23,7 @@ POST http://127.0.0.1:5000/formula
 
 
 ## Output
-```
+```json
 {
     "tracking": {
         "if_s_result_GreaterThan_10": true
