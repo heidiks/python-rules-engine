@@ -9,7 +9,7 @@ def formula():
     formula_request = FormulaRequest(body['variables'], body['formula'])
 
     calculated = calculate_formula(formula_request)
-    response = make_response(calculated.toJSON(), 200)
+    response = make_response(calculated.to_json(), 200)
     response.headers["Content-Type"] = "application/json"
     return response
 
